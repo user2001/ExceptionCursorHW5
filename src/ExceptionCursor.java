@@ -5,19 +5,19 @@ public class ExceptionCursor {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your login, please");
+        System.out.println("Enter your login.(It must contains minimum one digit, one letter and underline sign.Login's length should be less than 20 symbols)");
         String login = scanner.nextLine();
-        System.out.println("Enter your password");
+        System.out.println("Enter your password.(It must contains minimum one digit, one letter and underline sign.Login's length should be less than 20 symbols)");
         String password = scanner.nextLine();
         System.out.println("Confirm your password");
         String confirmPassword = scanner.nextLine();
         try {
             putLogin(login, password, confirmPassword);
         } catch (WrongLoginException e) {
-            System.out.println("wrong login, try again");
+            System.out.println("Wrong login, try again");
             e.getStackTrace();
         } catch (WrongPasswordException e2) {
-            System.out.println("wrong password, try again");
+            System.out.println("Wrong password, try again");
             e2.getStackTrace();
 
         }
