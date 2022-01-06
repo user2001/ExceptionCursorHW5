@@ -1,4 +1,4 @@
-public class WrongPasswordException extends  Exception{
+public class WrongPasswordException extends Exception {
     public WrongPasswordException() {
     }
 
